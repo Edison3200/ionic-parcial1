@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+
+    <ion-title>Saludo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Saludo:</ion-label>
+    <ion-input [(ngModel)]="saludar"></ion-input>
+  </ion-item>
+
+  <ion-button color="danger" clear (click)="saludo()"> 
+    <ion-icon name="hand-right-outline"></ion-icon>
+  </ion-button>
+
+
+</ion-content>

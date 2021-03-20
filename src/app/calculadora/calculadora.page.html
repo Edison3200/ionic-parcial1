@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button> 
+    </ion-buttons>
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <form >
+    <ion-item >
+      <ion-input type="text" placeholder="0" name="display" [(ngModel)]="resultado"></ion-input>
+    </ion-item>
+  </form>
+
+  <ion-fab style="margin-top: 12%;">
+    <ion-button color="warning" (click)="limpiar()">C</ion-button>
+  </ion-fab>
+  
+  <ion-fab style="margin-top: 33%;">
+    <ion-fab-button (click)="num('7')">7</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 25%;margin-top:45%;">
+    <ion-fab-button (click)="num('8')">8</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 50%;margin-top:45%;">
+    <ion-fab-button (click)="num('9')">9</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-top: 65%;">
+    <ion-fab-button (click)="num('4')">4</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 25%;margin-top: 65%;">
+    <ion-fab-button (click)="num('5')">5</ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab slot="fixed" style="margin-left: 50%;margin-top: 65%;">
+    <ion-fab-button (click)="num('6')">6</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-top: 85%;">
+    <ion-fab-button (click)="num('1')">1</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 25%;margin-top: 85%;">
+    <ion-fab-button (click)="num('2')">2</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 50%;margin-top: 85%;">
+    <ion-fab-button (click)="num('3')">3</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-top: 106%;">
+    <ion-fab-button (click)="operacion('/100')">%</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 25%;margin-top: 106%;">
+    <ion-fab-button (click)="num('0')">0</ion-fab-button>
+  </ion-fab>
+
+  <ion-fab slot="fixed" style="margin-left: 50%;margin-top: 106%;">
+    <ion-fab-button (click)="num('.')">.</ion-fab-button>
+  </ion-fab>
+  <!-- signo igual-->
+  <ion-fab horizontal="end" slot="fixed" style="margin-top: 106%;">
+    <ion-fab-button ion-button color="success" (click)="igual()"><ion-icon name="reorder-two-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+ <!-- suma-->
+  <ion-fab horizontal="end" slot="fixed" style="margin-top: 85%;">
+    <ion-fab-button ion-button color="danger" (click)="operacion('+')"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+  <!-- resta-->
+  <ion-fab horizontal="end" slot="fixed" style="margin-top: 65%;">
+    <ion-fab-button ion-button color="danger" (click)="operacion('-')"><ion-icon name="remove-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+  <!-- Multiplicacion-->
+  <ion-fab horizontal="end" slot="fixed" style="margin-top: 42%;">
+    <ion-fab-button ion-button color="danger" (click)="operacion('*')"><ion-icon name="close-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+
+   <!-- Division-->
+   <ion-fab horizontal="end" slot="fixed" style="margin-top: 25%;">
+    <ion-fab-button ion-button color="danger" (click)="operacion('/')">/</ion-fab-button>
+  </ion-fab>
+
+
+
+
+  
+</ion-content>
